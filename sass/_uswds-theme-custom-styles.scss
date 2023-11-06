@@ -1,0 +1,50 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+----------------------------------------
+USWDS THEME CUSTOM STYLES
+----------------------------------------
+!! Copy this file to your project's
+   sass root. Don't edit the version
+   in node_modules.
+----------------------------------------
+Custom project SASS goes here.
+
+i.e.
+@include u-padding-right('05');
+----------------------------------------
+*/
+
+@use "uswds-core" as *;
+
+.panel-left
+{
+   background-color: color("gray-cool-10");
+}
+
+.panel-center
+{
+   background-color: color("blue-warm-20v");
+   color: color("blue-warm-70");
+}
+
+.panel-right
+{
+   background-color: color("gray-cool-5");
+}
+
+.panel
+{
+   padding: units(4);
+   // margin: units(2);
+}
+
+.medical-list
+{
+   list-style: none;
+}

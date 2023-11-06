@@ -1,0 +1,6 @@
+- scrolling behavior, how much of the document is viewed
+- generate report linked to identity of tester (timestamp could work)
+- beginning-ish of december?  let's figure out how much to bite off
+- what is standard / possible with analytics?
+- PII?  Core 4?
+- needs to be outside-facing website
