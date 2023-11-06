@@ -192,5 +192,28 @@
     </div>
 </body>
 <script type="text/javascript" src="assets/uswds/js/uswds.min.js"></script>
+<script type="text/javascript">
+
+scrollEvents = {}
+
+addEventListener("scroll", (event) => {
+    // console.log(performance.now(), window.scrollY);
+    scrollEvents[performance.now()] = window.scrollY;
+    console.log(scrollEvents);
+
+});
+
+
+
+document.addEventListener("visibilitychange", function(event) {
+  if (document.visibilityState === 'hidden') {
+
+    navigator.sendBeacon('http://localhost:5000/', JSON.stringify(scrollEvents));
+  }
+})
+
+
+
+</script>
 
 </html>
