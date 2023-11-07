@@ -64,9 +64,11 @@ def hello_world():
 
     for jawn in range(0, len(heatmapNormalized)):
         heat = int(heatmapNormalized[jawn] * 255)
+        red = clamp(heat * 2, 0, 255)
+        green = clamp((255 - heat) * 2, 0, 255)
         
         
-        draw.line((0,jawn, 200,jawn), fill=(heat, heat, heat))
+        draw.line((0,jawn, 200,jawn), fill=(red, green, 0))
 
     # innerHeight = omfg["innerHeight"]
     # sessionLength = omfg["sessionLength"]
