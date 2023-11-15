@@ -1,0 +1,25 @@
+{
+  "name": "avatar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicksmadscience/avatar.git"
+  },
+  "author": "Nick Piegari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicksmadscience/avatar/issues"
+  },
+  "homepage": "https://github.com/nicksmadscience/avatar#readme",
+  "dependencies": {
+    "@uswds/uswds": "^3.6.1"
+  },
+  "devDependencies": {
+    "@uswds/compile": "^1.0.0"
+  }
+}

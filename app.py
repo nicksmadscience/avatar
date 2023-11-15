@@ -59,7 +59,12 @@ def hello_world():
             heatmapFile.write("{jawn},".format(jawn=jawn))
 
     from PIL import Image, ImageDraw
-    im = Image.new('RGB', (500, pageHeight), (0, 0, 0)) 
+
+
+    im = Image.open("bg.png")
+
+
+    # im = Image.new('RGBA', (1728, pageHeight), (0, 0, 0, 0)) 
     draw = ImageDraw.Draw(im) 
 
     for jawn in range(0, len(heatmapNormalized)):
@@ -67,8 +72,10 @@ def hello_world():
         red = clamp(heat * 2, 0, 255)
         green = clamp((255 - heat) * 2, 0, 255)
         
+        draw.line((0,jawn, 1728,jawn), fill=(red, green, 0, 255))
+        # draw.line((0, jawn, 15, jawn), fill=(red, green, 0, 255))
+        # draw.line((1713, jawn, 1728, jawn), fill=(red, green, 0, 255))
         
-        draw.line((0,jawn, 200,jawn), fill=(red, green, 0))
 
     # innerHeight = omfg["innerHeight"]
     # sessionLength = omfg["sessionLength"]
@@ -76,10 +83,18 @@ def hello_world():
     # scrollEvents = omfg["scrollEvents"]
     # scrollEventCount = len(scrollEvents)
 
-    draw.text((220, 10), "Session Length", align ="left")
-    draw.text((220, 30), str(sessionLength), align ="left")
+    # draw.text((220, 10), "Session Length", align ="left")
+    # draw.text((220, 30), str(sessionLength), align ="left")
 
-    im.show()
+    bg = Image.open("bg.png")
+    bg.putalpha(192)
+
+    # im.paste(bg, (0, 0))
+
+    Image.alpha_composite(im, bg).show()
+
+
+    # im.show()
 
 
     return "<p>Hello, World!</p>"
